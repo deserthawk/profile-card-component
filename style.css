@@ -1,0 +1,132 @@
+:root {
+    --card-component-radius: 20px;
+    --card-component-width: 350px;
+    --card-component-height: 350px;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    overflow: hidden;
+    color: hsl(229, 23%, 23%);
+}
+
+body::after {
+    content: "";
+    background-image: url('images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    background-image: url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.card-component {
+    min-width: var(--card-component-width);
+    min-height: var(--card-component-height);
+    background-color: white;
+    border-radius: var(--card-component-radius);
+    position: relative;
+}
+
+
+.card-component-header img {
+    border-radius: var(--card-component-radius) var(--card-component-radius) 0 0;
+}
+
+.profile-img {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: var(--card-component-width);
+    height: calc(var(--card-component-height) - 70px);
+    top: 0px;
+
+}
+
+.profile-img img {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+.card-component-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-component-line {
+    margin-top: 20px;
+
+}
+
+.card-component-line hr {
+    border-color: hsla(227, 10%, 46%, 0.281);
+}
+
+.card-component-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.card-component-bottom-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-info-header {
+    font-weight: 700;
+}
+
+.bottom-info-label {
+    font-size: 0.7em;
+    color:hsl(227, 10%, 46%);
+}
+.attribution{
+    margin:auto;
+    text-align: center;
+    color:white;
+}
+
+.attribution a{
+    text-decoration: none;
+    color:hsl(229, 23%, 23%);
+}
